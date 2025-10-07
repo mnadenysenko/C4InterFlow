@@ -239,6 +239,8 @@
             "Queue",
             "Topic",
             "Database",
+            "AdfPipeline",
+            "SSISPipeline",            
             "None"
           ]
         },
