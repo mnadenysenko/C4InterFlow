@@ -51,8 +51,10 @@ public enum ContainerType
 
     [Description("Azure Data Factory Pipeline")]
     AdfPipeline,
+
     [Description("SQL Server Integration Services Package")]
     SSISPackage,
+
     [Description("")]
     None
 }

@@ -240,7 +240,7 @@
             "Topic",
             "Database",
             "AdfPipeline",
-            "SSISPipeline",            
+            "SSISPackage",            
             "None"
           ]
         },
