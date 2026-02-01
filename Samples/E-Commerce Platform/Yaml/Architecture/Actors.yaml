@@ -1,9 +1,0 @@
-ECommercePlatform:
-  Actors:
-    Customer:
-      Type: Person
-      Activities:
-        Checkout:
-          Flows:
-          - Type: Use
-            Expression: ECommercePlatform.GenerateDemand.Storefront.SoftwareSystems.StorefrontApp.Interfaces.Checkout

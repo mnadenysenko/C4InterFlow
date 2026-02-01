@@ -6,7 +6,7 @@ using Serilog;
 using YamlDotNet.RepresentationModel;
 using YamlDotNet.Core;
 using Newtonsoft.Json.Schema;
-using System.Text.RegularExpressions;
+using System.Reflection;
 
 namespace C4InterFlow.Automation.Readers
 {
@@ -136,13 +136,11 @@ namespace C4InterFlow.Automation.Readers
             foreach (var nodePath in GetAllPaths(json))
             {
                 var token = json.SelectToken(nodePath);
-                if (bool.TryParse(token.Value<string>(), out var boolValue) &&
-                    Regex.IsMatch(token.Path, @"^.*\.Views\..*\.ExpandUpstream$"))
+                if (bool.TryParse(token.Value<string>(), out var boolValue))
                 {
                     token.Replace(boolValue);
                 }
-                else if (int.TryParse(token.Value<string>(), out var intValue) &&
-                    Regex.IsMatch(token.Path, @"^.*\.Views\..*\.MaxLineLabels$"))
+                else if (int.TryParse(token.Value<string>(), out var intValue))
                 {
                     token.Replace(intValue);
                 }
